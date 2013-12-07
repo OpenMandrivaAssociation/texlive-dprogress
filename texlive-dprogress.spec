@@ -6,7 +6,7 @@
 # catalog-version 0.1
 Name:		texlive-dprogress
 Version:	0.1
-Release:	5
+Release:	6
 Summary:	LaTeX-relevant log information for debugging
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dprogress
