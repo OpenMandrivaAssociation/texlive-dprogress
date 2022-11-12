@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/dprogress
-# catalog-date 2008-08-18 13:49:16 +0200
-# catalog-license lppl
-# catalog-version 0.1
 Name:		texlive-dprogress
-Version:	0.1
-Release:	11
+Version:	15878
+Release:	1
 Summary:	LaTeX-relevant log information for debugging
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dprogress
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ subsubsection headers and (if amsmath is loaded) details of the
 align environment.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,24 +40,11 @@ align environment.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
-+ Revision: 751084
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
-+ Revision: 718256
-- texlive-dprogress
-- texlive-dprogress
-- texlive-dprogress
-- texlive-dprogress
-
