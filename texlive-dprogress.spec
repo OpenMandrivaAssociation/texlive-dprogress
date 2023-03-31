@@ -1,6 +1,6 @@
 Name:		texlive-dprogress
 Version:	15878
-Release:	1
+Release:	2
 Summary:	LaTeX-relevant log information for debugging
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dprogress
