@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	LaTeX-relevant log information for debugging
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dprogress
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/dprogress
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dprogress.doc.r%{version}.tar.xz
